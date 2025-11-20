@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Input, Select, SelectItem, Button } from "@heroui/react";
+import DefaultLayout from "@/layouts/default";
 
 export default function CreateHotelForm() {
   const [errors, setErrors] = React.useState({});
@@ -158,6 +159,7 @@ export default function CreateHotelForm() {
   };
 
   return (
+    <DefaultLayout> 
     <Form
       className="w-full justify-center items-center space-y-4"
       validationErrors={errors}
@@ -345,5 +347,6 @@ export default function CreateHotelForm() {
       </div>
       <div> <br></br></div>
     </Form>
+     </DefaultLayout>
   );
 }
