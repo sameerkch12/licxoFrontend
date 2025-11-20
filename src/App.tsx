@@ -1,14 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 
 import IndexPage from "@/pages/index";
-import DefaultLayout from "@/layouts/default";
+
 import AddRoom from "@/pages/AddRoom";
+import ProfilePage from "./pages/Profile";
 
 function App() {
   return (
     <Routes>
-      <Route element={  <DefaultLayout> <IndexPage /> </DefaultLayout>} path="/" />
-      <Route element={<DefaultLayout> <AddRoom/> </DefaultLayout>} path="/addroom" />
+      <Route element={  <IndexPage />} path="/" />
+      <Route element={ <AddRoom/> } path="/addroom" />
+      <Route element={<ProfilePage/>} path="/profile" />
    
     </Routes>
   );
